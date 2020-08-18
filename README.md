@@ -1,1 +1,1 @@
-# Double_pendulum made with javascript and p5
+# Double pendulum made with javascript and p5
