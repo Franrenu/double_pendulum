@@ -2,9 +2,23 @@
 <html>
     <head>
         <title>Double Pendulum</title>
+        <link rel="stylesheet" href="style.css">
     </head>
 
     <body>
+        <div class="slideContainer">
+            <button id="Start" class="startbutton">Start</button> <br><br>
+            <button id="Stop" class="stopbutton">Stop</button> <br><br>
+            <p>L1 Value: <span id="r1_size_value"></span> </p> 
+            <input type="range" min="50" max="300" value="200" id="r1_size" class="slider">
+            <p>L2 Value: <span id="r2_size_value"></span> </p> 
+            <input type="range" min="50" max="300" value="200" id="r2_size" class="slider"> 
+            <p>M1 Value: <span id="m1_v"></span> </p> 
+            <input type="range" min="10" max="60" value="40" id="m1_value" class="slider">
+            <p>M2 Value: <span id="m2_v"></span> </p> 
+            <input type="range" min="10" max="60" value="40" id="m2_value" class="slider">
+            <p>Pendulum Disappeared?<br>Reload the page and click Start!</p>
+        </div>
         <script src="dp.js"></script>
         <script src="node_modules/p5/lib/p5.js"></script>
     </body>
