@@ -19,36 +19,59 @@ var r1_slider = document.getElementById("r1_size");
 var r2_slider = document.getElementById("r2_size");
 var m1_slider = document.getElementById("m1_value");
 var m2_slider = document.getElementById("m2_value");
+var a1_value = document.getElementById("A1_value");
+var a2_value = document.getElementById("A2_value");
 
 var r1_out = document.getElementById("r1_size_value");
 var r2_out = document.getElementById("r2_size_value");
 var m1_out = document.getElementById("m1_v");
 var m2_out = document.getElementById("m2_v");
+var a1_out = document.getElementById("A1_vvalue");
+var a2_out = document.getElementById("A2_vvalue");
 
 r1_out.innerHTML = r1_slider.value;
 r2_out.innerHTML = r2_slider.value;
 m1_out.innerHTML = m1_slider.value;
 m2_out.innerHTML = m2_slider.value;
+a1_out.innerHTML = a1_value.value;
+a2_out.innerHTML = a2_value.value;
 
 r1_slider.oninput = function() {
+    flag = false;
     r1_out.innerHTML = this.value;
     r1 = this.value;
 }
 
 r2_slider.oninput = function() {
+    flag = false;
     r2_out.innerHTML = this.value;
     r2 = this.value;
 }
 
 m1_slider.oninput = function() {
+    flag = false;
     m1_out.innerHTML = this.value;
     m1 = this.value;
 }
 
 m2_slider.oninput = function() {
+    flag = false;
     m2_out.innerHTML = this.value;
     m2 = this.value;
 }
+
+a1_value.oninput = function() {
+    flag = false;
+    a1_out.innerHTML = this.value;
+    a1 = (this.value)*(PI/180);
+}
+
+a2_value.oninput = function() {
+    flag = false;
+    a2_out.innerHTML = this.value;
+    a2 = (this.value)*(PI/180);
+}
+
 
 document.querySelector(".startbutton").addEventListener("click" , ()=> {
     flag = true;
@@ -64,7 +87,7 @@ function setup() {
 }
 
 function draw() {
-
+    
     
 
     if (flag) {
